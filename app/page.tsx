@@ -12,7 +12,7 @@ import SectionFive from "./components/Section5";
 import Footer from "./components/Footer";
 import SectionSix from "./components/Section6";
 // import Footer from "@/app/components/Footer";
-
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
 export default function Home() {
   const sectionTwoRef = useRef<any>(null);
 
@@ -23,7 +23,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (move) sectionTwoRef?.current.scrollIntoView({ behavior: "smooth" });
+    if (move)
+      elementScrollIntoView(sectionTwoRef?.current, { behavior: "smooth" });
     return () => {
       setMove(false);
     };
