@@ -44,7 +44,6 @@ const BoxSTinput = styled(Box)(({ theme }) => {
 const TypographySThead = styled(Typography)(() => {
   return {
     width: "100%",
-    fontFamily: "SCDream6",
   };
 });
 

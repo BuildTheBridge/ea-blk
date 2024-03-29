@@ -9,7 +9,7 @@ export default function Footer() {
         <Title>에듀케이션 얼라이언스</Title>
         <BoxSTsubContent>
           <SubText>
-            사업자 등록번호 : 740-07-02600 {size.width < 360 ? <br /> : " |"}{" "}
+            사업자 등록번호 : 740-07-02600 {size.width < 400 ? <br /> : " |"}
             대표 : 김세훈
           </SubText>
           <SubText>
@@ -19,7 +19,10 @@ export default function Footer() {
             전화 : 010-4639-9987 {size.width < 360 ? <br /> : " |"} 이메일 :
             ksh@buildthebr.com
           </SubText>
-          <SubText>Copyright © BUILD THE BRIDGE. All Rights Reserved.</SubText>
+          <SubText>
+            Copyright © BUILD THE BRIDGE. {size.width < 400 && <br />}All Rights
+            Reserved.
+          </SubText>
         </BoxSTsubContent>
       </BoxSTcontent>
     </Wrapper>
