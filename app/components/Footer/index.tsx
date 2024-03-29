@@ -1,28 +1,19 @@
-import useSize from "@/lib/hooks/useSize";
 import { Box, styled } from "@mui/material";
 
 export default function Footer() {
-  const size = useSize();
   return (
     <Wrapper>
       <BoxSTcontent>
-        <Title>에듀케이션 얼라이언스</Title>
+        <Title className="font-extrabold">에듀케이션 얼라이언스</Title>
         <BoxSTsubContent>
-          <SubText>
-            사업자 등록번호 : 740-07-02600 {size.width < 400 ? <br /> : " |"}
-            대표 : 김세훈
-          </SubText>
+          <SubText>사업자 등록번호 : 740-07-02600 | 대표 : 김세훈</SubText>
+          {/* <SubText>대표 : 김세훈</SubText> */}
           <SubText>
             주소 : 서울특별시 강남구 논현로 75길 15 501호 (역삼동, 수양빌딩)
           </SubText>
-          <SubText>
-            전화 : 010-4639-9987 {size.width < 360 ? <br /> : " |"} 이메일 :
-            ksh@buildthebr.com
-          </SubText>
-          <SubText>
-            Copyright © BUILD THE BRIDGE. {size.width < 400 && <br />}All Rights
-            Reserved.
-          </SubText>
+          <SubText>전화 : 010-4639-9987</SubText>
+          <SubText>이메일 : ksh@buildthebr.com</SubText>
+          <SubText>Copyright © BUILD THE BRIDGE. All Rights Reserved.</SubText>
         </BoxSTsubContent>
       </BoxSTcontent>
     </Wrapper>
@@ -58,16 +49,16 @@ const BoxSTcontent = styled(Box)(() => {
 
 const SubText = styled(Box)(() => {
   return {
-    fontWeight: 400,
-    fontSize: "16px",
-    color: "#9e9e9e",
+    fontWeight: "lighter",
+    fontSize: "13px",
+    color: "#8f8f8f",
     wordBreak: "keep-all",
   };
 });
 
 const Title = styled(Box)(() => {
   return {
-    fontWeight: 400,
+    // fontWeight: 400,
     fontSize: "24px",
     color: "#424242",
     wordBreak: "keep-all",
@@ -76,7 +67,7 @@ const Title = styled(Box)(() => {
 
 const BoxSTsubContent = styled(Box)(() => {
   return {
-    gap: "4px",
+    gap: "8px",
     width: "100%",
     display: "flex",
     flexDirection: "column",

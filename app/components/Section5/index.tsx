@@ -1,4 +1,3 @@
-import useSize from "@/lib/hooks/useSize";
 import { Box, Grid, styled } from "@mui/material";
 
 const Images = [
@@ -37,14 +36,11 @@ const Images = [
 ];
 
 export default function SectionFive() {
-  const size = useSize();
   return (
     <Wrapper>
       <Box>
-        <Title>국내외 주요 투자자들이</Title>
-        <Title>
-          에듀케이션 얼라이언스와{size.width < 600 ? <br /> : <></>} 함께합니다.
-        </Title>
+        <Title className="font-extrabold">국내외 주요 투자자들이</Title>
+        <Title className="font-extrabold">EA팀과 함께합니다.</Title>
       </Box>
       <ImageWrapper>
         <Container container>
@@ -86,7 +82,6 @@ const Title = styled("div")(() => {
     width: "100%",
     padding: "10px",
     fontSize: "40px",
-    fontWeight: 800,
     textAlign: "center",
     wordBreak: "keep-all",
     "@media (max-width:600px)": {

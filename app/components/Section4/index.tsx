@@ -86,6 +86,8 @@ const Wrapper = styled("div")(() => {
 
 const Card = styled("div")((props: { url: string }) => {
   const { url } = props;
+  // filter: blur(30px);
+  // transform: scale(1.2);
   return {
     gap: "24px",
     width: "100%",
@@ -96,6 +98,7 @@ const Card = styled("div")((props: { url: string }) => {
     borderRadius: "32px",
     aspectRatio: "1/1.2",
     flexDirection: "column",
+    // transform: "scale(1.2)",
     background: `url(${url}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "center",
