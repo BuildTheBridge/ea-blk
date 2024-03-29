@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/ea_logo.png" />
       <body className={karla.className}>{children}</body>
     </html>
   );
